@@ -25,7 +25,11 @@ export const useRemoveFavorites = () => {
       queryClient.setQueryData<Pet[]>(['pets'], (old = []) => {
         return old.map(pet => 
           pet.id === petId 
-            ? { ...pet, isFavorited: !pet.isFavorited }
+            ? { 
+                ...pet, 
+                isFavorited: !pet.isFavorited ,
+                num_users: pet.num_users + (pet.isFavorited ? -1 : 1)
+            }
             : pet
         );
       });

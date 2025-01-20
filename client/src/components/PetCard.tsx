@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import type { Pet } from '../interfaces/Pet';
 
-
 const SIZE_MAPPINGS = {
   S: 'small',
   M: 'medium',
@@ -15,13 +14,23 @@ const SIZE_MAPPINGS = {
 } as const;
 
 const PetCard = ({ pet }: { pet: Pet }) => {
-
   const loggedIn = useSelector(
     (state: RootState) => state.auth.isAuthenticated,
   );
   const { saveFavorite, error } = useSaveFavorites();
   const { removeFavorite } = useRemoveFavorites();
-  const { id, name, image, breed, age, type, location, size, num_users, isFavorited } = pet;
+  const {
+    id,
+    name,
+    image,
+    breed,
+    age,
+    type,
+    location,
+    size,
+    num_users,
+    isFavorited,
+  } = pet;
   const sizeName =
     type === 'dog' ? SIZE_MAPPINGS[size as keyof typeof SIZE_MAPPINGS] : '';
 
@@ -31,7 +40,7 @@ const PetCard = ({ pet }: { pet: Pet }) => {
 
   const handleRemoveFavorite = (id: number) => {
     removeFavorite(id);
-  }
+  };
 
   return (
     <>
@@ -53,10 +62,21 @@ const PetCard = ({ pet }: { pet: Pet }) => {
         </div>
         <div className='px-6 pt-4 pb-2 flex justify-between'>
           {loggedIn ? (
-        
             <div>
-              {isFavorited? ( <i className='fa-solid fa-heart fa-2xl text-red-500' role='button' onClick={() => handleRemoveFavorite(id)} ></i>):(<i className='far fa-heart fa-2xl' role='button' onClick={() => handleFavorite(id)}  ></i>)}
-              </div>
+              {isFavorited ? (
+                <i
+                  className='fa-solid fa-heart fa-2xl text-red-500'
+                  role='button'
+                  onClick={() => handleRemoveFavorite(id)}
+                ></i>
+              ) : (
+                <i
+                  className='far fa-heart fa-2xl'
+                  role='button'
+                  onClick={() => handleFavorite(id)}
+                ></i>
+              )}
+            </div>
           ) : (
             <Link to='/login'>Login to favorite.</Link>
           )}

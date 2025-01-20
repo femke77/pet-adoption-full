@@ -3,7 +3,9 @@ import { axiosInstance } from '../utils/axiosConfig';
 import type { Pet } from '../interfaces/Pet';
 
 const saveFavoriteApi = async (petId: number): Promise<string> => {
-  const response = await axiosInstance.post<string>(`/api/users/favorite/${petId}`);
+  const response = await axiosInstance.post<string>(
+    `/api/users/favorite/${petId}`,
+  );
   return response.data;
 };
 
@@ -12,7 +14,7 @@ export const useSaveFavorites = () => {
 
   const mutation = useMutation({
     mutationFn: (petId: number) => saveFavoriteApi(petId),
-    
+
     onMutate: async (petId: number) => {
       // Cancel any outgoing refetches
       await queryClient.cancelQueries({ queryKey: ['pets'] });
@@ -22,13 +24,13 @@ export const useSaveFavorites = () => {
 
       // Optimistically update both isFavorited and num_users
       queryClient.setQueryData<Pet[]>(['pets'], (old = []) => {
-        return old.map(pet => {
+        return old.map((pet) => {
           if (pet.id === petId) {
             const willBeFavorited = !pet.isFavorited;
             return {
               ...pet,
               isFavorited: willBeFavorited,
-            num_users: pet.num_users + (willBeFavorited ? 1 : -1)
+              num_users: pet.num_users + (willBeFavorited ? 1 : -1),
             };
           }
           return pet;

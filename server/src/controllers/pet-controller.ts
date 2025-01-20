@@ -17,7 +17,7 @@ export const getAllPets = async (req: Request, res: Response) => {
       },
       order: [
         ['id', 'DESC'], // required for react query cache invalidate to not reorder on the DOM
-    ],
+      ],
     });
     const updatedPets = pets.map((pet) => {
       const petData = pet.get({ plain: true });

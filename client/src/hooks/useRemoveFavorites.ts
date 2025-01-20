@@ -3,7 +3,9 @@ import { axiosInstance } from '../utils/axiosConfig';
 import type { Pet } from '../interfaces/Pet';
 
 const removeFavoriteApi = async (petId: number): Promise<string> => {
-  const response = await axiosInstance.delete<string>(`/api/users/favorite/${petId}`);
+  const response = await axiosInstance.delete<string>(
+    `/api/users/favorite/${petId}`,
+  );
   return response.data;
 };
 
@@ -12,7 +14,7 @@ export const useRemoveFavorites = () => {
 
   const mutation = useMutation({
     mutationFn: (petId: number) => removeFavoriteApi(petId),
-    
+
     // Optimistic update configuration
     onMutate: async (petId: number) => {
       // Cancel any outgoing refetches to avoid overwriting our optimistic update
@@ -23,14 +25,14 @@ export const useRemoveFavorites = () => {
 
       // Optimistically update the pets data
       queryClient.setQueryData<Pet[]>(['pets'], (old = []) => {
-        return old.map(pet => 
-          pet.id === petId 
-            ? { 
-                ...pet, 
-                isFavorited: !pet.isFavorited ,
-                num_users: pet.num_users + (pet.isFavorited ? -1 : 1)
-            }
-            : pet
+        return old.map((pet) =>
+          pet.id === petId
+            ? {
+                ...pet,
+                isFavorited: !pet.isFavorited,
+                num_users: pet.num_users + (pet.isFavorited ? -1 : 1),
+              }
+            : pet,
         );
       });
 

@@ -32,11 +32,10 @@ const sequelize = process.env.DB_URL
               },
             }
           : {},
-      }
+      },
     );
 
 export default sequelize;
-
 
 const User = UserFactory(sequelize);
 const Pet = PetFactory(sequelize);

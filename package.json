@@ -12,7 +12,8 @@
     "client:build": "cd client && npm run build",
     "client:dev": "cd client && npm run dev",
     "seed": "cd server && npm run seed",
-    "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\""
+    "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
+    "lint": "cd server && npx eslint ./src --fix && cd ../client && npx eslint . --fix"
 
   },
   "keywords": [],

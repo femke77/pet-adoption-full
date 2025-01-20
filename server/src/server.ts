@@ -8,8 +8,8 @@ import routes from './routes/index.js';
 import { sequelize } from './models/index.js';
 // import cors from 'cors';
 dotenv.config();
-import { fileURLToPath } from "node:url";
-import path from "node:path";
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -61,17 +61,14 @@ app.use(express.urlencoded({ extended: true }));
 // app.options('*', cors()); //preflight
 app.use(routes);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../../client/dist")));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../../client/dist')));
 
   // client-side routing
-  app.get("*", (_req, res) => {
-    res.sendFile(path.join(__dirname, "../../client/dist/index.html"));
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
   });
 }
-
-
-
 
 sequelize.sync({ force: forceDatabaseRefresh }).then(() => {
   app.listen(PORT, () => {

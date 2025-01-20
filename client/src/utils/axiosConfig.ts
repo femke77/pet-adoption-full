@@ -3,10 +3,10 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const axiosInstance = axios.create({
-  baseURL:
-    process.env.NODE_ENV === 'production'
-      ? 'https://pet-adoption-server-qa7c.onrender.com/'
-      : 'http://localhost:3004',
+  // baseURL:
+  //   process.env.NODE_ENV === 'production'
+  //     ? 'https://pet-adoption-server-qa7c.onrender.com/'
+  //     : 'http://localhost:3004',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',

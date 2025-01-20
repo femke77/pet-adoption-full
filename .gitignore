@@ -1,0 +1,7 @@
+.env
+client/dist
+server/dist
+node_modules
+client/node_modules
+server/node_modules
+notes.txt

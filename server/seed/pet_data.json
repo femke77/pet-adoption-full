@@ -1,0 +1,502 @@
+[
+  {
+    "type": "cat",
+    "name": "Coco",
+    "breed": "Norwegian Forest Cat",
+    "age": 10,
+    "gender": "M",
+    "size": "S",
+    "location": "East Bennettcester",
+  "image": "https://kittencoalition.org/wp-content/uploads/2022/08/NKC-BLOG-Featured-Image_single-kitten-syndrome.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Daisy",
+    "breed": "Highlander",
+    "age": 14,
+    "gender": "M",
+    "size": "S",
+    "location": "Pharr",
+    "image": "https://homeatlastrescue.ca/wp-content/uploads/2023/11/single-kitten.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Bella",
+    "breed": "Donskoy",
+    "age": 6,
+    "gender": "M",
+    "size": "S",
+    "location": "New Myles",
+    "image": "https://www.adoptapet.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fscac5p2hkp4h%2F58vtAQTbuZkSC8ahF4dIgs%2Fe9e06717f71af28c1cdcb011847da7cf%2Faap-hero-single-kitten-syndrome.jpg&w=3840&q=75"
+  },
+  {
+    "type": "dog",
+    "name": "Ollie",
+    "breed": "Schapendoes",
+    "age": 1,
+    "gender": "M",
+    "size": "S",
+    "location": "Gislasonchester",
+    "image": "https://www.dupageanimalfriends.org/uploads/1/1/0/6/110659955/screen-shot-2017-12-26-at-9-26-26-pm_orig.png"
+  },
+  {
+    "type": "dog",
+    "name": "Oreo",
+    "breed": "Alaskan Malamute",
+    "age": 6,
+    "gender": "F",
+    "size": "L",
+    "location": "South Constance",
+    "image": "http://www.dupageanimalfriends.org/uploads/1/1/0/6/110659955/published/screen-shot-2017-12-26-at-8-33-14-pm.png?1514345393"
+  },
+  {
+    "type": "dog",
+    "name": "Buddy",
+    "breed": "Magyar agár",
+    "age": 8,
+    "gender": "M",
+    "size": "L",
+    "location": "Santee",
+    "image": "https://cdn.working-dog.net/static/images/race/174.jpg?v=7"
+  },
+  {
+    "type": "dog",
+    "name": "Cooper",
+    "breed": "Miniature Pinscher",
+    "age": 6,
+    "gender": "M",
+    "size": "L",
+    "location": "South Telly",
+    "image": "https://t4.ftcdn.net/jpg/08/16/10/79/360_F_816107941_qA0xAabOnKqqk9v9AjcRYMu84Go78e1k.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Bella",
+    "breed": "Bengal",
+    "age": 11,
+    "gender": "M",
+    "size": "S",
+    "location": "San Jose",
+    "image": "https://catstheboss.com/wp-content/uploads/2018/12/cropped-20140208_104046.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Oreo",
+    "breed": "Ojos Azules",
+    "age": 5,
+    "gender": "F",
+    "size": "S",
+    "location": "Fort Stantonstead",
+    "image": "https://www.shutterstock.com/image-photo/cat-garden-260nw-210415621.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Oreo",
+    "breed": "Rat Terrier",
+    "age": 7,
+    "gender": "M",
+    "size": "L",
+    "location": "Stromanstead",
+    "image": "https://cdn.the-scientist.com/assets/articleNo/31203/iImg/3336/ac82744f-7d05-4a64-b4fb-97a87477a0eb-puppy.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Ace",
+    "breed": "Persian",
+    "age": 12,
+    "gender": "F",
+    "size": "S",
+    "location": "North Kaylahport",
+    "image": "https://www.worldsbestcatlitter.com/wp-content/uploads/2014/10/WBCL_web_2014_blog_entertain-single-cat.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Coco",
+    "breed": "Russian Blue",
+    "age": 9,
+    "gender": "F",
+    "size": "S",
+    "location": "Boulder",
+    "image": "https://rawznaturalpetfood.com/wp-content/uploads/russian-blue-cats.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Charlie",
+    "breed": "Chartreux",
+    "age": 8,
+    "gender": "M",
+    "size": "S",
+    "location": "Rutherfordcester",
+    "image": "https://t3.ftcdn.net/jpg/02/87/77/12/360_F_287771293_YU6qvn0de7wXiYU4ZBv5EVmCHCy7oEpD.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Bentley",
+    "breed": "Cardigan Welsh Corgi",
+    "age": 13,
+    "gender": "M",
+    "size": "S",
+    "location": "Port Ramonborough",
+    "image": "https://www.akc.org/wp-content/uploads/2017/11/Cardigan-Welsh-Corgi-puppy.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Daisy",
+    "breed": "Petit Basset Griffon Vendéen",
+    "age": 2,
+    "gender": "F",
+    "size": "L",
+    "location": "New Brad",
+    "image": "https://www.centralbarkusa.com/wp-content/uploads/2021/12/Mask-Group-56@2x_7157076_8062112.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Ollie",
+    "breed": "Somali",
+    "age": 3,
+    "gender": "F",
+    "size": "S",
+    "location": "Langmouth",
+    "image": "https://c8.alamy.com/comp/BYGW18/domestic-tabby-cat-single-young-female-adult-tabby-cat-sitting-studio-BYGW18.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Coco",
+    "breed": "Grand Bleu de Gascogne",
+    "age": 8,
+    "gender": "F",
+    "size": "L",
+    "location": "East Gilbertworth",
+    "image": "https://pethelpful.com/.image/t_share/MTgwNzE4Mzk4MzE1OTYzNzUy/five-dog-breeds-for-women-living-alone.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Bella",
+    "breed": "Harrier",
+    "age": 7,
+    "gender": "F",
+    "size": "M",
+    "location": "Palm Springs",
+    "image": "https://houndy.dogfuriendly.com/wp-content/uploads/2019/02/single3-997x1024.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Murphey",
+    "breed": "Japanese Bobtail",
+    "age": 8,
+    "gender": "F",
+    "size": "S",
+    "location": "Avondale",
+    "image": "https://img.freepik.com/premium-photo/single-cat-isolated-white-background_941600-25846.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Nala",
+    "breed": "Chow Chow",
+    "age": 7,
+    "gender": "F",
+    "size": "M",
+    "location": "Lake Lilian",
+    "image": "https://thumbs.dreamstime.com/b/watercolor-single-dog-animal-isolated-white-background-illustration-watercolor-single-dog-animal-isolated-149994820.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Jax",
+    "breed": "Kurilian Bobtail",
+    "age": 4,
+    "gender": "F",
+    "size": "S",
+    "location": "Prosaccofield",
+    "image": "https://images.litter-robot.com/media/magefan_blog/2016/07/lonely-cat.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Bruno",
+    "breed": "Birman",
+    "age": 12,
+    "gender": "F",
+    "size": "S",
+    "location": "Kentwood",
+    "image": "https://pangovet.com/wp-content/uploads/2024/06/bengal-cat-sitting_TheCats-Shutterstock.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Bentley",
+    "breed": "Armenian Gampr dog",
+    "age": 2,
+    "gender": "M",
+    "size": "M",
+    "location": "Boyerworth",
+    "image": "https://images.ctfassets.net/sfnkq8lmu5d7/4Ma58uke8SXDQLWYefWiIt/3f1945422ea07ea6520c7aae39180101/2021-11-24_Singleton_Puppy_Syndrome_One_Puppy_Litter.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Bruno",
+    "breed": "Sporting Lucas Terrier",
+    "age": 9,
+    "gender": "F",
+    "size": "S",
+    "location": "Burke",
+    "image": "https://miro.medium.com/v2/resize:fit:1400/1*PALdSL6PnluiXrjrO8BpCw.jpeg"
+  },
+  {
+    "type": "cat",
+    "name": "Max",
+    "breed": "Turkish Angora",
+    "age": 1,
+    "gender": "F",
+    "size": "S",
+    "location": "Josianefurt",
+    "image": "https://www.diamondpet.com/wp-content/uploads/2021/03/kitten-sitting-on-floor-031621.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Max",
+    "breed": "Chausie",
+    "age": 13,
+    "gender": "M",
+    "size": "S",
+    "location": "Lake Skylarbury",
+    "image": "https://imgcdn.stablediffusionweb.com/2024/9/6/cb67b596-1994-48e7-893c-f857ec299f53.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Buddy",
+    "breed": "Miniature Pinscher",
+    "age": 5,
+    "gender": "F",
+    "size": "L",
+    "location": "Lawsonburgh",
+    "image": "https://t4.ftcdn.net/jpg/10/37/41/75/360_F_1037417503_ptNBr0wZI52cXmB7D5DctArdKcdo0A9e.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Maggie",
+    "breed": "Koyun dog",
+    "age": 8,
+    "gender": "M",
+    "size": "L",
+    "location": "Boehmstad",
+    "image": "https://www.arba.org/Pictures/APinscher.gif"
+  },
+  {
+    "type": "dog",
+    "name": "Jack",
+    "breed": "Phalène",
+    "age": 4,
+    "gender": "M",
+    "size": "L",
+    "location": "Fort Friedrichview",
+    "image": "https://www.shutterstock.com/image-photo/georgia-savannah-historic-pet-friendly-260nw-2532102715.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Archie",
+    "breed": "Caucasian Shepherd Dog",
+    "age": 1,
+    "gender": "F",
+    "size": "S",
+    "location": "Jackieton",
+    "image": "https://www.azenkutyam.hu/wp-content/uploads/2020/07/gettyimages-1175260882-scaled.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Rosie",
+    "breed": "Yorkshire Terrier",
+    "age": 5,
+    "gender": "M",
+    "size": "XL",
+    "location": "Lake Ray",
+    "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-09/Yorkshire%20Terrier.jpg?h=5a48805e&itok=W6ZnjJac"
+  },
+  {
+    "type": "cat",
+    "name": "Dixie",
+    "breed": "Bengal",
+    "age": 12,
+    "gender": "F",
+    "size": "S",
+    "location": "Port Keithville",
+    "image": "https://www.trupanion.com/images/trupanionwebsitelibraries/bg/bengal-cat.jpg?sfvrsn=fc36dda4_5"
+  },
+  {
+    "type": "cat",
+    "name": "Scout",
+    "breed": "Turkish Angora",
+    "age": 2,
+    "gender": "F",
+    "size": "S",
+    "location": "New Idellacester",
+    "image": "https://cats.com/wp-content/uploads/2022/09/12-weeks-kitten-compressed.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Molly",
+    "breed": "American Bobtail",
+    "age": 11,
+    "gender": "F",
+    "size": "S",
+    "location": "South Bransonmouth",
+    "image": "https://i.dailymail.co.uk/i/pix/2017/03/02/18/2DFC78B400000578-4276000-image-a-1_1488480257861.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Bentley",
+    "breed": "Billy",
+    "age": 10,
+    "gender": "F",
+    "size": "M",
+    "location": "South Hermann",
+    "image": "https://thumbs.dreamstime.com/b/adorable-mixed-breed-dog-transparent-background-cute-brown-mixed-breed-dog-sitting-looking-camera-isolated-326002128.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Nova",
+    "breed": "Havana",
+    "age": 9,
+    "gender": "F",
+    "size": "S",
+    "location": "Jeanetteworth",
+    "image": "https://assets.newatlas.com/dims4/default/f06ac6a/2147483647/strip/true/crop/5760x3840+0+0/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Fd1%2F2c%2F1a0b54cb4793969cd7ad81aca704%2Fdepositphotos-133251802-xl.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Molly",
+    "breed": "Irish Red and White Setter",
+    "age": 7,
+    "gender": "M",
+    "size": "S",
+    "location": "Richiefurt",
+    "image": "https://media-be.chewy.com/wp-content/uploads/shutterstock_492574771.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Scout",
+    "breed": "Greek Harehound",
+    "age": 13,
+    "gender": "M",
+    "size": "M",
+    "location": "Kunzeberg",
+    "image": "http://www.mybreedersupply.com/cdn/shop/articles/single_pup_fat_jpg.webp?v=1694022263"
+  },
+  {
+    "type": "dog",
+    "name": "Teddy",
+    "breed": "Coton de Tulear",
+    "age": 12,
+    "gender": "M",
+    "size": "S",
+    "location": "New Lamontchester",
+    "image": "https://cupcakesandcashmere.com/.image/t_share/MTg3NjA1MjIyOTUxMDM2MTU5/screen-shot-2022-02-22-at-22335-pm.png"
+  },
+  {
+    "type": "dog",
+    "name": "Bailey",
+    "breed": "Bolognese",
+    "age": 14,
+    "gender": "M",
+    "size": "S",
+    "location": "South Orrinbury",
+    "image": "https://www.dogster.com/wp-content/uploads/2024/05/woman-walking-her-beagle-at-the-park_New-Africa_Shutterstock.jpeg"
+  },
+  {
+    "type": "cat",
+    "name": "Ace",
+    "breed": "Sokoke",
+    "age": 13,
+    "gender": "F",
+    "size": "S",
+    "location": "Streichmouth",
+    "image": "https://i.pinimg.com/564x/88/a9/de/88a9de5520c17c5e8742a75950a123df.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Ace",
+    "breed": "Swedish Lapphund",
+    "age": 1,
+    "gender": "M",
+    "size": "S",
+    "location": "Malikaberg",
+    "image": "https://www.worldlifeexpectancy.com//images/a/d/d/b/swedish_lapphund/swedish_lapphund_1.webp"
+  },
+  {
+    "type": "dog",
+    "name": "Gus",
+    "breed": "Lancashire Heeler",
+    "age": 9,
+    "gender": "F",
+    "size": "S",
+    "location": "Rockville",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Grupp_1%2C_LANCASHIRE_HEELER%2C_NO_UCH_NO_V-14_NO_V-15_SE_UCH_St%C3%A5hlskyttens_Longed_For_Antony_%2824284065606%29.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Oreo",
+    "breed": "Egyptian Mau",
+    "age": 3,
+    "gender": "F",
+    "size": "S",
+    "location": "Great Falls",
+    "image": "https://images.litter-robot.com/media/magefan_blog/2018/05/Keeping-a-Single-Cat-Conent-Image-760x335.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Tuffy",
+    "breed": "Manx",
+    "age": 1,
+    "gender": "M",
+    "size": "S",
+    "location": "West Carmella",
+    "image": "https://cdn.openart.ai/published/Inxe4DgtN26TmQSr3lK4/Iix70HCy_pCxj_1024.webp"
+  },
+  {
+    "type": "cat",
+    "name": "Finn",
+    "breed": "Burmese",
+    "age": 10,
+    "gender": "M",
+    "size": "S",
+    "location": "North Desiree",
+    "image": "https://images.squarespace-cdn.com/content/v1/5c357b9b4cde7a208b449838/1594413522930-FTX62PU6PLM6SIE7PZNR/IMG_7184.JPG"
+  },
+  {
+    "type": "cat",
+    "name": "Hank",
+    "breed": "LaPerm",
+    "age": 13,
+    "gender": "M",
+    "size": "S",
+    "location": "Aurora",
+    "image": "https://d.newsweek.com/en/full/2273505/kitten-mocking-one-eyed-cat-goes-viral.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Ginger",
+    "breed": "Persian",
+    "age": 13,
+    "gender": "F",
+    "size": "S",
+    "location": "Evansville",
+    "image": "https://kittencoalition.org/wp-content/uploads/BLOG_featured-image_Rectal-Prolapse_Sept-2024.jpg"
+  },
+  {
+    "type": "dog",
+    "name": "Hank",
+    "breed": "Portuguese Podengo",
+    "age": 4,
+    "gender": "F",
+    "size": "S",
+    "location": "East Candace",
+    "image": "https://cupcakesandcashmere.com/.image/t_share/MTg3NjA1MTg4MzIyNzk3NDU1/img_0932.jpg"
+  },
+  {
+    "type": "cat",
+    "name": "Gus",
+    "breed": "Sokoke",
+    "age": 1,
+    "gender": "M",
+    "size": "S",
+    "location": "New Devante",
+    "image": "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy81Mjk2NDIwNC9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTc2MjY3NDkxOX0.VZIWI4dh6fmb1nkjO2ZhV7vJrPoCT0JjHClazMBTyY4/img.jpg?width=1200&height=600&coordinates=0%2C55%2C0%2C55"
+  }
+]

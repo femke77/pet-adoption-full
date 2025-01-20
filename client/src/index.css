@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'CuteCat';
+  src: url('./assets/fonts/cute_cat/CuteCat.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Adopt page animation*/
+.slide-right {
+  transform: translateX(-100%);
+}
+.slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.slide-left {
+  transform: translateX(100%);
+}
+.slide {
+  animation: slide 0.5s forwards;
+}
+@keyframes slide {
+  100% {
+    transform: translateX(0%);
+  }
+}

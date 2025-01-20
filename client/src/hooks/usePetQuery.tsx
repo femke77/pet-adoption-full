@@ -13,6 +13,6 @@ export const usePetQuery = () => {
     queryFn: () => fetchPets(),
     staleTime: 1000 * 60 * 5,
     gcTime: 1000 * 60 * 10,
-    placeholderData: (previousData) => previousData,
+    placeholderData: (previousData) => previousData ?? [],
   });
 };

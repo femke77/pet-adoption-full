@@ -25,8 +25,13 @@ export const useSaveFavorites = () => {
       queryClient.setQueryData<Pet[]>(['pets'], (old = []) => {
         return old.map(pet => 
           pet.id === petId 
-            ? { ...pet, isFavorited: !pet.isFavorited }
-            : pet
+            ? {  ...pet, 
+              isFavorited: !pet.isFavorited,
+              num_favorites: pet.isFavorited 
+                ? pet.num_users - 1 
+                : pet.num_users + 1
+            }
+          : pet
         );
       });
 

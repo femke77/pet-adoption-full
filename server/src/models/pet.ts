@@ -34,6 +34,7 @@ export class Pet
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
   public countFavoritedBy!: () => Promise<number>;
+  
 
   // public static override associations: {
   //   favoritedBy: Association<Pet, User>;

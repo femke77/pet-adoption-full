@@ -5,6 +5,7 @@ import {
   updateUser,
   deleteUser,
   favoritePet,
+  removeFavoritePet,
 } from '../../controllers/user-controller.js';
 
 const router = express.Router();
@@ -23,5 +24,7 @@ router.delete('/:id', deleteUser);
 
 // POST /users/favorite - Favorite a pet
 router.post('/favorite/:petId', favoritePet);
+
+router.delete('/favorite/:petId', removeFavoritePet);
 
 export { router as userRouter };

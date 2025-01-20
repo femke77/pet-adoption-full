@@ -74,7 +74,22 @@ export const favoritePet = async (req: Request, res: Response) => {
       await user.addFavoritePet(pet);
       res.json([{ message: 'Pet added to favorites' }]);
     } else {
-      res.status(404).json({ message: 'User not found' });
+      res.status(404).json({ message: 'User or pet not found' });
+    }
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+export const removeFavoritePet = async (req: Request, res: Response) => {
+  const { petId } = req.params;
+  try {
+    const user = await User.findByPk(req.session.user_id);
+    const pet = await Pet.findByPk(petId);
+    if (user && pet) {
+      await user.removeFavoritePet(pet);
+      res.json([{ message: 'Pet removed from favorites' }]);
+    } else {
+      res.status(404).json({ message: 'User or pet not found' });
     }
   } catch (error: any) {
     res.status(500).json({ message: error.message });

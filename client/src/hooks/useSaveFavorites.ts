@@ -28,7 +28,7 @@ export const useSaveFavorites = () => {
             return {
               ...pet,
               isFavorited: willBeFavorited,
-              num_users: pet.num_users + (willBeFavorited ? 1 : -1)
+            num_users: pet.num_users + (willBeFavorited ? 1 : -1)
             };
           }
           return pet;

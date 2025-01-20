@@ -9,4 +9,5 @@ export interface Pet {
   size: string;
   gender: string;
   num_users: number;
+  isFavorited: boolean;
 }

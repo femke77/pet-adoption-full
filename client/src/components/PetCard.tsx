@@ -15,6 +15,7 @@ interface PetProps {
   size: string;
   gender: string;
   num_users: number;
+  isFavorited: boolean;
 }
 
 const SIZE_MAPPINGS = {
@@ -29,7 +30,7 @@ const PetCard = ({ pet }: { pet: PetProps }) => {
     (state: RootState) => state.auth.isAuthenticated,
   );
   const { saveFavorite, error } = useSaveFavorites();
-  const { id, name, image, breed, age, type, location, size, num_users } = pet;
+  const { id, name, image, breed, age, type, location, size, num_users, isFavorited } = pet;
   const sizeName =
     type === 'dog' ? SIZE_MAPPINGS[size as keyof typeof SIZE_MAPPINGS] : '';
 
@@ -57,15 +58,18 @@ const PetCard = ({ pet }: { pet: PetProps }) => {
         </div>
         <div className='px-6 pt-4 pb-2 flex justify-between'>
           {loggedIn ? (
-            <span
-              role='button'
-              onClick={() => handleFavorite(id)}
-              className='inline-block bg-pink-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'
-            >
-              Add to favorites
-              <i className='fa-solid fa-heart fa-2xl text-red-500'></i>
-              <i className='far fa-heart fa-2xl'></i>
-            </span>
+            // <span
+            //   role='button'
+            //   onClick={() => handleFavorite(id)}
+            //   className='inline-block bg-pink-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'
+            // >
+            //   Add to favorites
+            //   <i className='fa-solid fa-heart fa-2xl text-red-500'></i>
+            //   <i className='far fa-heart fa-2xl'></i>
+            // </span>
+            <div>
+              {isFavorited? ( <i className='fa-solid fa-heart fa-2xl text-red-500'></i>):(<i className='far fa-heart fa-2xl' role='button' onClick={() => handleFavorite(id)}  ></i>)}
+              </div>
           ) : (
             <Link to='/login'>Login to favorite.</Link>
           )}

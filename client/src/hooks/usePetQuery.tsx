@@ -11,7 +11,7 @@ export const usePetQuery = () => {
   return useQuery({
     queryKey: ['pets'],
     queryFn: () => fetchPets(),
-    staleTime: 1000 * 60 * 5,
+    staleTime: 1000 * 60 * 10,
     gcTime: 1000 * 60 * 10,
     placeholderData: (previousData) => previousData ?? [],
   });

@@ -13,7 +13,7 @@
     "client:dev": "cd client && npm run dev",
     "seed": "cd server && npm run seed",
     "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
-    "lint": "cd server && npx eslint ./src --fix && cd ../client && npx eslint . --fix"
+    "lint": "cd server && npx eslint . --fix && cd ../client && npx eslint . --fix"
 
   },
   "keywords": [],
@@ -24,5 +24,13 @@
   },
   "devDependencies": {
     "wait-on": "^8.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femke77/pet-adoption-full.git"
+  },
+  "bugs": {
+    "url": "https://github.com/femke77/pet-adoption-full/issues"
+  },
+  "homepage": "https://github.com/femke77/pet-adoption-full#readme"
 }

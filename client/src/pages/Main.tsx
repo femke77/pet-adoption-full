@@ -1,9 +1,6 @@
 import Pets from '../assets/images/sunshine-pets.webp';
-import { useWakeUp } from '../hooks/useWakeup';
 
 export default function Main() {
-  // render.com server is very slow, try to wake it while user is on the main page.
-  useWakeUp();
 
   return (
     <div className=''>

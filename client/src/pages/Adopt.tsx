@@ -6,9 +6,9 @@ import pets from '../assets/images/pets.png';
 import home from '../assets/images/home.png';
 
 const Adopt = () => {
-  // TODO switch to ref instead of querySelector
+
   const sectionsRef = useRef<HTMLElement[]>([]);
-  // Track which sections have been animated
+  // Set of sections that have been animated for animation on scroll up as well as scroll down
   const [animatedSections, setAnimatedSections] = useState<Set<number>>(
     new Set(),
   );
@@ -273,3 +273,5 @@ const Adopt = () => {
   );
 };
 export default Adopt;
+
+

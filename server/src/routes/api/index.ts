@@ -8,15 +8,5 @@ const router = Router();
 router.use('/users', apiGuard, userRouter);
 router.use('/pets', petRouter);
 
-router.use('/wake-up', (_, res) => {
-  res.json({ message: 'Server has been told to wake up.' });
-});
-router.use((req, _res, next) => {
-  console.log('Incoming request session:', {
-    sessionId: req.sessionID,
-    isLoggedIn: req.session?.logged_in,
-    userId: req.session?.user_id,
-  });
-  next();
-});
+
 export default router;

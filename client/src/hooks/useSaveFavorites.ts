@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { axiosInstance } from '../utils/axiosConfig';
 import type { Pet } from '../interfaces/Pet';
 
+// direct interaction with cache was overkill since I'm only updating in one spot
 const saveFavoriteApi = async (petId: number): Promise<string> => {
   const response = await axiosInstance.post<string>(
     `/api/users/favorite/${petId}`,

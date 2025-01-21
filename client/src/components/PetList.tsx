@@ -3,9 +3,9 @@ import { usePetQuery } from '../hooks/usePetQuery';
 import type { Pet } from '../interfaces/Pet';
 
 const PetList = () => {
-  const { data: pets, isLoading, isFetching, error } = usePetQuery();
+  const { data: pets, isLoading,error } = usePetQuery();
 
-  if (isLoading || isFetching) return <div>Loading...</div>;
+  if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error fetching pets.</div>;
 
   return (

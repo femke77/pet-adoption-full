@@ -40,8 +40,10 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-session": "^1.18.1",
+    "express-winston": "^4.2.0",
     "pg": "^8.11.5",
-    "sequelize": "^6.37.5"
+    "sequelize": "^6.37.5",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

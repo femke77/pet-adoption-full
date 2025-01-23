@@ -8,5 +8,13 @@ const router = Router();
 router.use('/users', apiGuard, userRouter);
 router.use('/pets', petRouter);
 
+router.use((req, _res, next) => {
+  console.log('Incoming request session:', {
+    sessionId: req.sessionID,
+    isLoggedIn: req.session?.logged_in,
+    userId: req.session?.user_id,
+  });
+  next();
+});
 
 export default router;

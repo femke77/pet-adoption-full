@@ -15,8 +15,8 @@ export const getAllUsers = async (_req: Request, res: Response) => {
 };
 
 // GET /Users/:id
-export const getUserById = async (req: Request, res: Response) => {
-  const id = req.params.id ? req.params.id : req.session.user_id;
+export const getLoggedInUser = async (req: Request, res: Response) => {
+  const id = req.session.user_id;
   try {
     const user = await User.findByPk(id, {
       attributes: { exclude: ['password'] },

@@ -1,11 +1,11 @@
 import express from 'express';
 import {
   getAllUsers,
-  getUserById,
   updateUser,
   deleteUser,
   favoritePet,
   removeFavoritePet,
+  getLoggedInUser,
 } from '../../controllers/user-controller.js';
 
 const router = express.Router();
@@ -13,8 +13,8 @@ const router = express.Router();
 // GET /users - Get all users
 router.get('/', getAllUsers);
 
-// GET /users/:id - Get a user by id
-router.get('/user/:id?', getUserById);
+// GET /users/:id - get logged in user
+router.get('/me', getLoggedInUser);
 
 // PUT /users/:id - Update a user by id
 router.put('/:id', updateUser);

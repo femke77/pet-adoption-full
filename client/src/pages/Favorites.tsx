@@ -1,5 +1,5 @@
 import PetList from "../components/PetList";
-import { useSingleUserQuery } from "../hooks/useSingleUser";
+import { useSingleUserQuery } from "../hooks/useLoggedInUserQuery";
 
 const Favorites = () => {
 

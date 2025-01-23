@@ -24,13 +24,13 @@ export const useRemoveFavorites = () => {
         // Snapshot previous values
         const previousPetsByType: Record<string, Pet[]> = {};
         queryClient.getQueryCache().findAll({ queryKey: ['pets'] }).forEach((query) => {
-          const type = query.queryKey[1] as string; // Extract type from query key
+          const type = query.queryKey[1] as string;
           previousPetsByType[type || ''] = query.state.data as Pet[] || [];
         });
   
         const previousUser = queryClient.getQueryData<User>(['user']);
   
-        // Optimistically update pets list for all types
+        // Optimistically update pets list
         queryClient.getQueryCache().findAll({ queryKey: ['pets'] }).forEach((query) => {
           const type = query.queryKey[1] as string;
           queryClient.setQueryData<Pet[]>(['pets', type || ''], (old = []) =>
@@ -46,7 +46,7 @@ export const useRemoveFavorites = () => {
           );
         });
   
-        // Optimistically update user favorites for the Favorites page
+        // Optimistically update user favorites
         queryClient.setQueryData<User>(['user'], (old) => {
           if (!old) return old;
           return {
@@ -69,7 +69,7 @@ export const useRemoveFavorites = () => {
       },
   
       onSettled: () => {
-        // Refetch to ensure consistency
+        // Refetch queries to ensure consistency
         queryClient.invalidateQueries({ queryKey: ['pets'] });
         queryClient.invalidateQueries({ queryKey: ['user'] });
       },
@@ -83,5 +83,4 @@ export const useRemoveFavorites = () => {
       error: mutation.error,
     };
   };
-  
   

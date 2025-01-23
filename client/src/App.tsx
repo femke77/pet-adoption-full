@@ -9,6 +9,7 @@ import CryptoJS from 'crypto-js';
 import { useEffect } from 'react';
 import Navigation from './components/NavBar';
 import Footer from './components/Footer';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const App = () => {
   const logout = useLogout();
@@ -39,6 +40,7 @@ const App = () => {
         theme='colored'
         autoClose={2500}
       />
+      <ReactQueryDevtools />
       <Navigation />
       <main className='min-h-screen'>
         <Outlet />

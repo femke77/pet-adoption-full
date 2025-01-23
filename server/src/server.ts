@@ -19,7 +19,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 
-app.set('trust proxy', 1);
+app.set('trust proxy', 1); // must have this for Heroku to work with secure cookies
 const PORT = process.env.PORT || 3004;
 const SequelizeSessionStore = SequelizeStore(session.Store);
 const sess = {

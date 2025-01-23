@@ -62,7 +62,7 @@ const Register: React.FC = () => {
     if (loggedIn) {
       navigate('/');
     }
-  }, [loggedIn, navigate]);
+  }, [loggedIn]);
 
   return (
     <div>

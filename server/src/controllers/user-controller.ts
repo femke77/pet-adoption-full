@@ -65,6 +65,7 @@ export const deleteUser = async (req: Request, res: Response) => {
   }
 };
 
+// POST /Users/favorite/:petId - Favorite a pet
 export const favoritePet = async (req: Request, res: Response) => {
   const { petId } = req.params;
   try {
@@ -80,6 +81,8 @@ export const favoritePet = async (req: Request, res: Response) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+// DELETE /Users/favorite/:petId - Unfavorite a pet
 export const removeFavoritePet = async (req: Request, res: Response) => {
   const { petId } = req.params;
   try {

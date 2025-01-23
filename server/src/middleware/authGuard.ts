@@ -10,7 +10,7 @@ declare module 'express-session' {
 
 const apiGuard = (req: Request, res: Response, next: NextFunction) => {
   if (!req.session.logged_in) {
-    res.status(401).json({ msg: 'You must login to perform this action' });
+    res.status(401).json({ msg: 'You must login to perform this action' }); 
   } else {
     next();
   }

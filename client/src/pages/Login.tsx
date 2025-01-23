@@ -56,7 +56,7 @@ const LoginForm: React.FC = () => {
     if (loggedIn) {
       navigate('/');
     }
-  }, [loggedIn, navigate]);
+  }, [loggedIn]);
 
   return (
     <div>

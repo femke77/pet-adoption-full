@@ -41,7 +41,7 @@ export const getAllPets = async (req: Request, res: Response) => {
   }
 };
 
-// GET /Pets/:id with number of users who are interested in the pet
+// GET /Pets/:id returns Pet with number of users who are interested in the pet
 export const getPetById = async (req: Request, res: Response) => {
   const { id } = req.params;
 
@@ -59,7 +59,7 @@ export const getPetById = async (req: Request, res: Response) => {
   }
 };
 
-// POST /Pets
+// POST /Pets  Create pet
 export const createPet = async (req: Request, res: Response) => {
   try {
     const pet = new Pet({
@@ -79,7 +79,7 @@ export const createPet = async (req: Request, res: Response) => {
   }
 };
 
-// PUT /Pets/:id
+// PUT /Pets/:id  Update Pet
 export const updatePet = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
@@ -97,7 +97,7 @@ export const updatePet = async (req: Request, res: Response) => {
   }
 };
 
-// DELETE /Pets/:id
+// DELETE /Pets/:id  Delete a pet
 export const deletePet = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {

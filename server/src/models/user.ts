@@ -9,6 +9,7 @@ interface UserAttributes {
   email: string;
   first_name: string;
   last_name: string;
+  favoritePets?: Pet[];
 }
 
 interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
@@ -28,6 +29,7 @@ export class User
   public getFavortiePets!: () => Promise<Pet[]>;
   public addFavoritePet!: (pet: Pet) => Promise<void>;
   public removeFavoritePet!: (pet: Pet) => Promise<void>;
+  public countFavoritePets!: () => Promise<number>;
 
   public async setPassword(password: string) {
     const saltRounds = 10;
@@ -71,6 +73,7 @@ export function UserFactory(sequelize: Sequelize): typeof User {
           len: [8, 30],
         },
       },
+
     },
     {
       freezeTableName: true,

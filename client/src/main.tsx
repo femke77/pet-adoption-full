@@ -9,11 +9,11 @@ import AuthGuard from './components/AuthGuard.tsx';
 import { Provider } from 'react-redux';
 import { store } from './state/store';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Test from './pages/Test.tsx';
 import Login from './pages/Login.tsx';
 import Register from './pages/Register.tsx';
 import Adopt from './pages/Adopt.tsx';
 import Pets from './pages/Pets.tsx';
+import Favorites from './pages/Favorites.tsx';
 
 const queryClient = new QueryClient();
 
@@ -45,13 +45,12 @@ const router = createBrowserRouter([
         element: <Pets />,
       },
       {
-        path: '/test',
-        element: (
-          <AuthGuard>
-            <Test />
-          </AuthGuard>
-        ),
+        path: '/favorites',
+        element: <AuthGuard>
+          <Favorites />
+        </AuthGuard>,
       },
+     
     ],
   },
 ]);

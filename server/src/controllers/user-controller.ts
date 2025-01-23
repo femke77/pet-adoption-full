@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { User } from '../models/user.js';
 import { Pet } from '../models/pet.js';
-
+// import { sequelize } from '../models/index.js';
 // GET /Users
 export const getAllUsers = async (_req: Request, res: Response) => {
   try {
@@ -16,14 +16,35 @@ export const getAllUsers = async (_req: Request, res: Response) => {
 
 // GET /Users/:id
 export const getUserById = async (req: Request, res: Response) => {
-  const { id } = req.params;
+  const id = req.params.id ? req.params.id : req.session.user_id;
   try {
     const user = await User.findByPk(id, {
       attributes: { exclude: ['password'] },
-      include: Pet,
+      include: [{ 
+        model: Pet, 
+        as: 'favoritePets',
+        include: [{
+          model: User,
+          as: 'favoritedBy', // Assuming this is the correct association name
+          attributes: ['id'] // Select specific user fields
+        }]
+      }],
     });
+
     if (user) {
-      res.json(user);
+      const updatedUser = user.get({ plain: true });
+      updatedUser.favoritePets = updatedUser.favoritePets
+        ? updatedUser.favoritePets.map((pet: any) => ({
+            ...pet, 
+            isFavorited: pet.favoritedBy?.some(
+              (user: { id: number }) => user.id === id,
+            ) ?? false,
+            num_users: pet.favoritedBy?.length || 0,
+  
+          }))
+        : [];
+
+      res.json(updatedUser);
     } else {
       res.status(404).json({ message: 'User not found' });
     }
@@ -31,6 +52,7 @@ export const getUserById = async (req: Request, res: Response) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 // PUT /Users/:id
 export const updateUser = async (req: Request, res: Response) => {

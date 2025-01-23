@@ -40,6 +40,7 @@ const PetCard = ({ pet }: { pet: Pet }) => {
 
   const handleRemoveFavorite = (id: number) => {
     removeFavorite(id);
+    
   };
 
   return (

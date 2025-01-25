@@ -14,6 +14,7 @@ import Register from './pages/Register.tsx';
 import Adopt from './pages/Adopt.tsx';
 import Pets from './pages/Pets.tsx';
 import Favorites from './pages/Favorites.tsx';
+import Contact from './pages/Contact.tsx';
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: '/meet',
         element: <Pets />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
       {
         path: '/favorites',

@@ -6,7 +6,6 @@ const Favorites = () => {
     const {data: user, isLoading, isError} = useSingleUserQuery();
     const favoritePets = user?.favoritePets || [];
   
-    console.log(favoritePets);
     
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error...</div>;

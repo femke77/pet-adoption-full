@@ -12,7 +12,7 @@ const Favorites = () => {
     
     return (
         <div>
-            <h2 className='font-cuteCat text-6xl md:text-7xl lg:text-8xl text-center font-bold mt-3 pt-2 mb-2'>
+            <h2 className='font-cuteCat text-6xl md:text-7xl lg:text-8xl text-center font-bold mt-3 pt-2 mb-2 px-2'>
                 My Favorite Pets
             </h2>
             <PetList pets={favoritePets}/>

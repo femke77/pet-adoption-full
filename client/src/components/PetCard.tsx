@@ -31,6 +31,7 @@ const PetCard = ({ pet }: { pet: Pet }) => {
     num_users,
     isFavorited,
   } = pet;
+
   const sizeName =
     type === 'dog' ? SIZE_MAPPINGS[size as keyof typeof SIZE_MAPPINGS] : '';
 
@@ -40,7 +41,7 @@ const PetCard = ({ pet }: { pet: Pet }) => {
 
   const handleRemoveFavorite = (id: number) => {
     removeFavorite(id);
-    
+
   };
 
   return (
@@ -83,9 +84,9 @@ const PetCard = ({ pet }: { pet: Pet }) => {
           )}
           {error &&
             loggedIn &&
-            toast.error('There was a problem saving the favorite')}
+            toast.error('There was a problem saving the favorite.')}
           <span className='inline-block bg-pink-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
-            {num_users > 1 ? `${num_users} favorites` : `${num_users} favorite`}
+            {(num_users !== 1) ? `${num_users} favorites` : `${num_users} favorite`}
           </span>
         </div>
       </div>

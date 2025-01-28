@@ -4,6 +4,7 @@ import counsel from '../assets/images/counsel.png';
 import checks from '../assets/images/checks.png';
 import pets from '../assets/images/pets.png';
 import home from '../assets/images/home.png';
+import { Link } from 'react-router-dom';
 
 const Adopt = () => {
 
@@ -89,7 +90,7 @@ const Adopt = () => {
         multiple animals into a single application; no need to apply multiple
         times. Please note that submitting a questionnaire is the first step in
         our process and does not guarantee adoption of a particular dog or cat.
-        Contact us if you have any questions.
+         {" "}<Link to="/contact" className='underline'>Contact us</Link> if you have any questions.
       </p>
 
       <div className='px-4 md:px-8 lg:px-10'>
@@ -124,8 +125,8 @@ const Adopt = () => {
               to apply once and we will ensure it is directed to the right
               person. Please note that submitting an application is the first
               step in our process and does not guarantee adoption of a
-              particular dog or cat. Contact us if you have any questions.
-              {/* TODO link to contact */}
+              particular dog or cat. <Link to="/contact" className='underline'>Contact us</Link> if you have any questions.
+            
             </p>
             <button className='flex w-30 mx-auto mt-5 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
               Adoption Questionnaire

@@ -15,6 +15,8 @@
 
   Client built with TailwindCSS and Headless UI for React.
 
+  Zod was the original choice for user data validation, but then I found react-hook-form and used it for the contact page.
+
   Routing is done with React Router Dom.
 
   Sequelize is the ORM for a PostgreSQL database. Express is the server. Express Router for routing.

@@ -7,16 +7,19 @@
   
   Match users with the pet of their dreams. 
 
-
-  This application uses session authentication with an axios response interceptor to redirect the user to login if session expires, but rolling is set to true with express-sessions so user should stay logged in until 5 min of inactivity.
+  <hr/>
 
   React query handles state from server such as pet data. Auth status and user details client state is handled by Redux Toolkit. User details are encrypted and stored in sessionStorage for persistance across reloads. 
+
+  React query optimistic UI makes favoriting and unfavoriting instant regardless of server time to response. Unfavoriting on the favorties page is also instant. Filtering by Dog vs Cat vs All uses the cache. 
 
   Client built with TailwindCSS and Headless UI for React.
 
   Routing is done with React Router Dom.
 
-  Sequelize is my ORM for a PostgreSql database. Express is my server. Express router handles the routing.
+  Sequelize is the ORM for a PostgreSQL database. Express is the server. Express Router for routing.
+
+  This application uses session authentication with an axios response interceptor to redirect the user to login if session expires, but rolling is set to true with express-sessions so user should stay logged in until 5 min of inactivity.
 
   This app was originally designed with headless architecture, but Safari third party cookie rules made this too difficult for this project. 
   

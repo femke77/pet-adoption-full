@@ -54,9 +54,9 @@
   
 
 ### Screenshots
-![ss1](./src/assets/images/homepage.png)
+![ss1](./client/src/assets/images/homepage.png)
 
-![ss2](./src/assets/images/adoptpage.png)
+![ss2](./client/src/assets/images/adoptpage.png)
 
 ______________________________________________________________________________________
 

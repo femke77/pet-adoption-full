@@ -1,7 +1,14 @@
 import { Request, Response } from 'express';
 import { Pet, User } from '../models/index.js';
 import Stripe from 'stripe'
-const stripeInstance = new Stripe('sk_test_51QmVL0Lia8unXJjo3CNOzE2L86DaNNCxualUYhcRLpMgnp97v0OLuPXvCyZQdN0jXUrbwgGixrvM2Y0lth80zBm200llqFM86y');
+
+const key = process.env.STRIPE_API_KEY;
+
+if (!key) {
+  throw new Error('Missing Stripe API key');
+}
+
+const stripeInstance = new Stripe(key);
 
 
 export const donate = async (req: Request, res: Response) => {

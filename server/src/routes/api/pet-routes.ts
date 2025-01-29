@@ -5,6 +5,7 @@ import {
   updatePet,
   deletePet,
   createPet,
+  donate
 } from '../../controllers/pet-controller.js';
 // import { apiGuard } from '../../middleware/authGuard.js';
 const router = express.Router();
@@ -23,5 +24,7 @@ router.post('/', createPet);
 
 // DELETE /pets/:id - Delete a pet by id
 router.delete('/:id', deletePet);
+
+router.post("/donate", donate)
 
 export { router as petRouter };

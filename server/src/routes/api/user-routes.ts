@@ -25,6 +25,9 @@ router.delete('/:id', deleteUser);
 // POST /users/favorite - Favorite a pet
 router.post('/favorite/:petId', favoritePet);
 
+// DELETE /users/favorite - Remove a favorite pet
 router.delete('/favorite/:petId', removeFavoritePet);
+
+
 
 export { router as userRouter };

@@ -43,6 +43,7 @@
     "express-winston": "^4.2.0",
     "pg": "^8.11.5",
     "sequelize": "^6.37.5",
+    "stripe": "^17.6.0",
     "winston": "^3.17.0"
   },
   "devDependencies": {

@@ -1,5 +1,45 @@
 import { Request, Response } from 'express';
 import { Pet, User } from '../models/index.js';
+import Stripe from 'stripe'
+const stripeInstance = new Stripe('sk_test_51QmVL0Lia8unXJjo3CNOzE2L86DaNNCxualUYhcRLpMgnp97v0OLuPXvCyZQdN0jXUrbwgGixrvM2Y0lth80zBm200llqFM86y');
+
+
+export const donate = async (req: Request, res: Response) => {
+
+  const { amount } = req.body;
+  const referer = req.headers.referer || '';
+  const url = new URL(referer).origin;
+  console.log(url);
+  
+
+  try {
+   const session = await stripeInstance.checkout.sessions.create({
+    line_items: [{
+      price_data: {
+        currency: 'usd',
+        product_data: {
+          name: 'Donation',
+        },
+        unit_amount: amount * 100,
+      },
+      quantity: 1,
+    }],
+    mode: 'payment',
+    payment_method_types: ['card'],
+    success_url: `${url}/success`,
+    cancel_url: `${url}/`,  
+  });
+if (session) {
+  res.json(session.id);
+}
+  else{ 
+    res.status(500).json({ message: 'Failed to create session' });
+  }
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 
 // GET /Pets/:type?/:breed?
 export const getAllPets = async (req: Request, res: Response) => {
@@ -112,3 +152,4 @@ export const deletePet = async (req: Request, res: Response) => {
     res.status(500).json({ message: error.message });
   }
 };
+

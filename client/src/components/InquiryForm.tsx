@@ -27,13 +27,10 @@ const InquiryForm = () => {
         }, 5000);
         reset();
     }
-    console.log(errors);
+
     const { width } = useWindowSize();
 
-    // useEffect(() => {
-    //     reset();
-    // }   , [isSubmitSuccessful]);
-
+  
     return (
         <div className='flex flex-1 flex-wrap'>
 

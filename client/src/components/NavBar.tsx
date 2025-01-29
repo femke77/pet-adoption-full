@@ -15,6 +15,7 @@ const navigation = [
   { name: 'How to Adopt', to: '/adopt' },
   { name: 'Meet the Pets', to: '/meet' },
   { name: 'My Favorites', to: '/favorites' },
+  { name: 'Contact', to: '/contact' },
   { name: 'Login', to: '/login' },
 ];
 
@@ -26,7 +27,7 @@ export default function Navigation() {
 
   const location = useLocation();
   return (
-    <Disclosure as='nav' className='bg-gray-700'>
+    <Disclosure as='nav' className='bg-gray-700 h-20 py-2'>
       {({ open }) => (
         <>
           <div className='mx-auto px-4 sm:px-4 lg:px-4'>
@@ -52,18 +53,19 @@ export default function Navigation() {
                     />
                   </DisclosureButton>
                 </NavLink>
-                <div className='hidden sm:ml-6 sm:flex flex-1 items-center'>
-                  <div className='flex space-x-4'>
+                <div className='hidden sm:flex flex-1 items-center py-6'>
+                  <div className='flex space-x-4 items-center'>
                     {navigation.map((item) => {
                       if (loggedIn && item.name === 'Login') {
                         return (
-                          <button
+                          <div
+                            role='button'
                             key={item.name}
                             onClick={() => logout.mutate()}
                             className='text-gray-300 hover:bg-gray-700 hover:text-white text-sm px-3'
                           >
                             Logout
-                          </button>
+                          </div>
                         );
                       }
                       return (

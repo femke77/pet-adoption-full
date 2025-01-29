@@ -1,6 +1,5 @@
-import { useMutation } from "@tanstack/react-query";
-import { axiosInstance } from "../utils/axiosConfig";
-
+import { useMutation } from '@tanstack/react-query';
+import { axiosInstance } from '../utils/axiosConfig';
 
 const stripeCheckoutApi = async (amount: string): Promise<string> => {
   const response = await axiosInstance.post(`/api/pets/donate`, {
@@ -10,10 +9,8 @@ const stripeCheckoutApi = async (amount: string): Promise<string> => {
 };
 
 export const useStripeCheckout = () => {
-  const mutation =  useMutation({
-    mutationFn: stripeCheckoutApi
-
-   
-
+  const mutation = useMutation({
+    mutationFn: stripeCheckoutApi,
   });
-  return { checkout: mutation.mutateAsync, isPending: mutation.isPending };};
+  return { checkout: mutation.mutateAsync, isPending: mutation.isPending };
+};

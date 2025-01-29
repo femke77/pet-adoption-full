@@ -1,52 +1,47 @@
 import { Request, Response } from 'express';
 import { Pet, User } from '../models/index.js';
-import Stripe from 'stripe'
+import Stripe from 'stripe';
 
 const key = process.env.STRIPE_API_KEY;
-
 if (!key) {
   throw new Error('Missing Stripe API key');
 }
-
 const stripeInstance = new Stripe(key);
 
-
+// POST /donate - Create a donation session
 export const donate = async (req: Request, res: Response) => {
-
   const { amount } = req.body;
   const referer = req.headers.referer || '';
   const url = new URL(referer).origin;
-  console.log(url);
-  
 
   try {
-   const session = await stripeInstance.checkout.sessions.create({
-    line_items: [{
-      price_data: {
-        currency: 'usd',
-        product_data: {
-          name: 'Donation',
+    const session = await stripeInstance.checkout.sessions.create({
+      line_items: [
+        {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: 'Donation',
+            },
+            unit_amount: amount * 100,
+          },
+          quantity: 1,
         },
-        unit_amount: amount * 100,
-      },
-      quantity: 1,
-    }],
-    mode: 'payment',
-    payment_method_types: ['card'],
-    success_url: `${url}/success`,
-    cancel_url: `${url}/`,  
-  });
-if (session) {
-  res.json(session.id);
-}
-  else{ 
-    res.status(500).json({ message: 'Failed to create session' });
-  }
+      ],
+      mode: 'payment',
+      payment_method_types: ['card'],
+      success_url: `${url}/success`,
+      cancel_url: `${url}/`,
+    });
+    if (session) {
+      res.json(session.id);
+    } else {
+      res.status(500).json({ message: 'Failed to create session' });
+    }
   } catch (error: any) {
     res.status(500).json({ message: error.message });
   }
 };
-
 
 // GET /Pets/:type?/:breed?
 export const getAllPets = async (req: Request, res: Response) => {
@@ -159,4 +154,3 @@ export const deletePet = async (req: Request, res: Response) => {
     res.status(500).json({ message: error.message });
   }
 };
-

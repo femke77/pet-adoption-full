@@ -2,9 +2,6 @@ import { Request, Response } from 'express';
 import { User } from '../models/user.js';
 import { Pet } from '../models/pet.js';
 
-
-
-
 // GET /Users
 export const getAllUsers = async (_req: Request, res: Response) => {
   try {
@@ -125,5 +122,3 @@ export const removeFavoritePet = async (req: Request, res: Response) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-

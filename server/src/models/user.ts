@@ -73,7 +73,6 @@ export function UserFactory(sequelize: Sequelize): typeof User {
           len: [8, 30],
         },
       },
-
     },
     {
       freezeTableName: true,

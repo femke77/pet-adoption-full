@@ -18,7 +18,6 @@ import Contact from './pages/Contact.tsx';
 
 const queryClient = new QueryClient();
 
-
 const router = createBrowserRouter([
   {
     path: '/',
@@ -51,11 +50,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/favorites',
-        element: <AuthGuard>
-          <Favorites />
-        </AuthGuard>,
+        element: (
+          <AuthGuard>
+            <Favorites />
+          </AuthGuard>
+        ),
       },
-     
     ],
   },
 ]);

@@ -15,11 +15,10 @@ export function useWindowSize() {
     }
 
     window.addEventListener('resize', handleResize);
-    handleResize(); 
+    handleResize();
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return windowSize;
 }
-

@@ -20,27 +20,30 @@ export const getLoggedInUser = async (req: Request, res: Response) => {
   try {
     const user = await User.findByPk(id, {
       attributes: { exclude: ['password'] },
-      include: [{ 
-        model: Pet, 
-        as: 'favoritePets',
-        include: [{
-          model: User,
-          as: 'favoritedBy', // Assuming this is the correct association name
-          attributes: ['id'] // Select specific user fields
-        }]
-      }],
+      include: [
+        {
+          model: Pet,
+          as: 'favoritePets',
+          include: [
+            {
+              model: User,
+              as: 'favoritedBy', // Assuming this is the correct association name
+              attributes: ['id'], // Select specific user fields
+            },
+          ],
+        },
+      ],
     });
 
     if (user) {
       const updatedUser = user.get({ plain: true });
       updatedUser.favoritePets = updatedUser.favoritePets
         ? updatedUser.favoritePets.map((pet: any) => ({
-            ...pet, 
-            isFavorited: pet.favoritedBy?.some(
-              (user: { id: number }) => user.id === id,
-            ) ?? false,
+            ...pet,
+            isFavorited:
+              pet.favoritedBy?.some((user: { id: number }) => user.id === id) ??
+              false,
             num_users: pet.favoritedBy?.length || 0,
-  
           }))
         : [];
 
@@ -52,7 +55,6 @@ export const getLoggedInUser = async (req: Request, res: Response) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 
 // PUT /Users/:id
 export const updateUser = async (req: Request, res: Response) => {

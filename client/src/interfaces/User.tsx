@@ -1,4 +1,4 @@
-import { Pet } from "./Pet";
+import { Pet } from './Pet';
 
 interface User {
   id: number;
@@ -6,7 +6,7 @@ interface User {
   first_name: string;
   last_name: string;
   username: string;
-  favoritePets: Pet[]
+  favoritePets: Pet[];
 }
 
 export type { User };

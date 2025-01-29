@@ -5,6 +5,7 @@ import { RootState } from '../state/store';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import type { Pet } from '../interfaces/Pet';
+import PlaceholderImg from '../assets/images/photo-soon.jpg';
 
 const SIZE_MAPPINGS = {
   S: 'small',
@@ -41,7 +42,6 @@ const PetCard = ({ pet }: { pet: Pet }) => {
 
   const handleRemoveFavorite = (id: number) => {
     removeFavorite(id);
-
   };
 
   return (
@@ -49,7 +49,7 @@ const PetCard = ({ pet }: { pet: Pet }) => {
       <div className='w-96 rounded overflow-hidden shadow-lg m-3'>
         <div className='w-full h-48 flex justify-center items-center '>
           <img
-            src={image ? image : 'https://via.placeholder.com/300'}
+            src={image ? image : PlaceholderImg}
             className='w-64 h-48 object-contain'
             alt={`${name} the ${breed} ${type}`}
             loading='lazy'
@@ -86,7 +86,9 @@ const PetCard = ({ pet }: { pet: Pet }) => {
             loggedIn &&
             toast.error('There was a problem saving the favorite.')}
           <span className='inline-block bg-pink-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
-            {(num_users !== 1) ? `${num_users} favorites` : `${num_users} favorite`}
+            {num_users !== 1
+              ? `${num_users} favorites`
+              : `${num_users} favorite`}
           </span>
         </div>
       </div>

@@ -22,26 +22,32 @@ export const useSaveFavorites = () => {
 
       // Snapshot previous values for all types
       const previousPetsByType: Record<string, Pet[]> = {};
-      queryClient.getQueryCache().findAll({ queryKey: ['pets'] }).forEach((query) => {
-        const type = query.queryKey[1] as string; 
-        previousPetsByType[type || ''] = query.state.data as Pet[] || [];
-      });
+      queryClient
+        .getQueryCache()
+        .findAll({ queryKey: ['pets'] })
+        .forEach((query) => {
+          const type = query.queryKey[1] as string;
+          previousPetsByType[type || ''] = (query.state.data as Pet[]) || [];
+        });
 
       // Optimistically update all pet queries
-      queryClient.getQueryCache().findAll({ queryKey: ['pets'] }).forEach((query) => {
-        const type = query.queryKey[1] as string;
-        queryClient.setQueryData<Pet[]>(['pets', type || ''], (old = []) =>
-          old.map((pet) =>
-            pet.id === petId
-              ? {
-                  ...pet,
-                  isFavorited: !pet.isFavorited,
-                  num_users: pet.num_users + (!pet.isFavorited ? 1 : -1),
-                }
-              : pet
-          )
-        );
-      });
+      queryClient
+        .getQueryCache()
+        .findAll({ queryKey: ['pets'] })
+        .forEach((query) => {
+          const type = query.queryKey[1] as string;
+          queryClient.setQueryData<Pet[]>(['pets', type || ''], (old = []) =>
+            old.map((pet) =>
+              pet.id === petId
+                ? {
+                    ...pet,
+                    isFavorited: !pet.isFavorited,
+                    num_users: pet.num_users + (!pet.isFavorited ? 1 : -1),
+                  }
+                : pet,
+            ),
+          );
+        });
 
       // Return snapshots for rollback
       return { previousPetsByType };
@@ -49,9 +55,11 @@ export const useSaveFavorites = () => {
 
     onError: (_err, _petId, context) => {
       // Roll back cache updates on error
-      Object.entries(context?.previousPetsByType || {}).forEach(([type, pets]) => {
-        queryClient.setQueryData(['pets', type], pets);
-      });
+      Object.entries(context?.previousPetsByType || {}).forEach(
+        ([type, pets]) => {
+          queryClient.setQueryData(['pets', type], pets);
+        },
+      );
     },
 
     onSettled: () => {

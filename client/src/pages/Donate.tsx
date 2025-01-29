@@ -26,8 +26,14 @@ const Donate = () => {
     return isNaN(num) ? '' : num.toFixed(2);
   };
 
+  const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawValue = e.target.value;
+    if (/^\d*\.?\d{0,2}$/.test(rawValue)) {
+        setValue("amount", rawValue, { shouldValidate: true });
+    }
+};
+
   const onSubmit: (data: FormInput) => void = async (data: FormInput) => {
-    console.log('onSubmit', data);
     const stripe = await stripePromise;
     if (!stripe) return;
 
@@ -44,11 +50,12 @@ const Donate = () => {
     <div>
       <h1>Donate</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Amount</label>
-        <input
-          type='number'
-          step='0.01'
+        <label>Amount </label> 
+        $<input
+          type='text'
+          placeholder='Enter amount'
           {...register('amount', { required: true })}
+          onChange={handleAmountChange} 
           onBlur={(e) => setValue('amount', formatAmount(e.target.value))}
         />
         <button type='submit' disabled={isPending}>

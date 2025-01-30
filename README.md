@@ -55,7 +55,7 @@
   
   ## Usage 
   
-  Clone the repository, run the install command and then 'npm run dev'. Then navigate to the localhost port.
+  Clone the repository, run the install command and then ```npm run start:dev```. Then navigate to the localhost port.
 
   To test the stripe integration, which is in test mode, use the CC number: 
 

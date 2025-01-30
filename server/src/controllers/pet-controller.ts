@@ -31,7 +31,7 @@ export const donate = async (req: Request, res: Response) => {
       ],
       mode: 'payment',
       payment_method_types: ['card'],
-      success_url: `${url}/success`,
+      success_url: `${url}/success/{CHECKOUT_SESSION_ID}`,
       cancel_url: `${url}/donate`,
     });
     if (session) {

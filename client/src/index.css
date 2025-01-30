@@ -61,7 +61,7 @@ main {
 }
 
 .success {
-  min-height: 100%;
+  min-height: 100vh;
   background-image: url('./assets/images/blue-bg-group.jpg');
   padding-top: 20px;
   background-size: cover;

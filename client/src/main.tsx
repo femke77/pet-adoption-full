@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         element: <Donate />,
       },
       {
-        path: '/success',
+        path: '/success/:session_id',
         element: <Success />,
       },
       {

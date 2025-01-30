@@ -46,20 +46,24 @@ body {
   }
 }
 
+main {
+  overflow-x: hidden;
+}
 
 .donate-container {
   background-image: url('./assets/images/bg-dog-cat.jpg');
-  min-height: 83vh;
-  background-size: cover;
-  width: 100%;
+  min-height: 100vh;
+  background-size: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
 }
 
 .success {
-  min-height: 83vh;
+  min-height: 100%;
   background-image: url('./assets/images/blue-bg-group.jpg');
   padding-top: 20px;
   background-size: cover;
+  background-position: center;
 }

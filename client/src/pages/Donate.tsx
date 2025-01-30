@@ -48,10 +48,12 @@ const Donate = () => {
         }
     };
     return (
-        <div className="donate-container flex flex-col items-center">
+        <div className="donate-container flex flex-col items-center  px-4">
             <h2 className='font-cuteCat text-6xl md:text-7xl lg:text-8xl text-center font-bold pt-3  mb-2 px-2'>
                 Donate to the Pets! </h2>
-                <p className='w-96 my-6 text-center'>Pawsome Pets Adoption is a volunteer-powered 501(c)(3) non-profit. We carefully guard every resource we have to maximize the number of animals we can save. Adoption fees do not cover all of the costs associated with our rescues, and we never want to turn away a dog or cat based on cost alone. Instead, we rely on generous donors to fund our lifesaving efforts and ensure that we can keep rescuing animals in need. Join our mission today and be a part of this incredible journey of compassion and hope.</p>
+            
+                <p className='max-w-sm text-xl my-6 text-center'>Pawsome Pets Adoption is a volunteer-powered 501(c)(3) non-profit. We carefully guard every resource we have to maximize the number of animals we can save. Adoption fees do not cover all of the costs associated with our rescues, and we never want to turn away a dog or cat based on cost alone. Instead, we rely on generous donors to fund our lifesaving efforts and ensure that we can keep rescuing animals in need. Join our mission today and be a part of this incredible journey of compassion and hope.</p>
+               
             <form className="flex flex-col items-center justify-center" onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex space-x-4 mb-8">
                     <label>Amount </label>
@@ -67,7 +69,7 @@ const Donate = () => {
                     />
                 </div>
                 <button
-                    className='flex w-24 mx-10 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                    className='flex w-24 mx-10 mb-18 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
 
                     type='submit' disabled={isPending}>
                     {isPending ? 'Processing...' : 'Donate'}

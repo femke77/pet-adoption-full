@@ -10,7 +10,7 @@ export default function Main() {
       <p className='font-cuteCat text-center text-3xl md:text-5xl  my-5 font-bold'>
         Find your new best friend today!
       </p>
-      <p className='px-8 md:px-14 mb-14 font-poppins '>
+      <p className='px-8 text-lg md:px-14 mb-14 font-poppins '>
         Adopting a puppy, dog, cat, or kitten from Pawsome Pets is not just
         about finding a pet; it's about welcoming a new family member into your
         home. We are dedicated to ensuring that every animal finds a loving

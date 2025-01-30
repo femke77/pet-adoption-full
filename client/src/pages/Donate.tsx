@@ -62,7 +62,7 @@ const Donate = () => {
           {isPending ? 'Processing...' : 'Donate'}
         </button>
       </form>
-      {errors.amount && <span>This field is required</span>}
+      {errors.amount && <span>This field is required.</span>}
     </div>
   );
 };

@@ -55,3 +55,10 @@ body {
   background-position-x: center;
   background-position-y: bottom;
 }
+
+.success {
+  min-height: 83vh;
+  background-image: url('./assets/images/blue-bg-group.jpg');
+  padding-top: 20px;
+  background-size: cover;
+}

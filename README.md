@@ -69,12 +69,18 @@
     password
 
   ### Deployed Link
-  
+  https://pawsome-pets-a74380f52be3.herokuapp.com/
 
 ### Screenshots
 ![ss1](./client/src/assets/images/homepage.png)
 
 ![ss2](./client/src/assets/images/adoptpage.png)
+
+![ss3](./client/src/assets/images/fav.png)
+
+![ss4](./client/src/assets/images/donate.png)
+
+![ss5](./client/src/assets/images/inquire.png)
 
 ______________________________________________________________________________________
 
@@ -102,7 +108,7 @@ To run tests, run the following command:
 
 Images of cats & dogs together by [Vecteezy.com](https://www.vecteezy.com/)<br/>
 Thanks to [Lucky Dog Animal Rescue](https://www.luckydoganimalrescue.org/) for providing site content and loose specs for this project. <br/>
-Custom fonts from [dafont.com](https://www.dafont.com/)
+Custom fonts from [dafont.com](https://www.dafont.com/) and google fonts.
 
  ## Questions 
   

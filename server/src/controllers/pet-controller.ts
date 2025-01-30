@@ -14,7 +14,7 @@ export const donate = async (req: Request, res: Response) => {
   const referer = req.headers.referer || '';
   const url = new URL(referer).origin;
   console.log(amount);
-  
+
   try {
     const session = await stripeInstance.checkout.sessions.create({
       line_items: [
@@ -24,7 +24,7 @@ export const donate = async (req: Request, res: Response) => {
             product_data: {
               name: 'Donation to PawSome Pets Adoption',
             },
-            unit_amount: Math.round(amount *100),
+            unit_amount: Math.round(amount * 100),
           },
           quantity: 1,
         },

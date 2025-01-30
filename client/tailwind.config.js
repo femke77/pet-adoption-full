@@ -9,8 +9,8 @@ export default {
 
         fontFamily: {
           kittenPaw: ['KittenPaw', 'sans-serif'],
-          cuteCat: ['CuteCat', 'sans-serif'],
           poppins: ['Poppins', 'sans-serif'],
+          cuteCat: ['CuteCat', 'Poppins', 'sans-serif'],
 
         },
       

@@ -57,6 +57,7 @@ const InquiryForm = () => {
           <img
             src={DogEyes}
             alt='Dog and Cat'
+            loading='lazy'
             className='w-full h-auto p-6 object-cover  '
           />
         )}

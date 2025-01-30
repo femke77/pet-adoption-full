@@ -22,7 +22,7 @@ export const donate = async (req: Request, res: Response) => {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: 'Donation',
+              name: 'Donation to PawSome Pets Adoption',
             },
             unit_amount: Math.round(amount *100),
           },
@@ -32,7 +32,7 @@ export const donate = async (req: Request, res: Response) => {
       mode: 'payment',
       payment_method_types: ['card'],
       success_url: `${url}/success`,
-      cancel_url: `${url}/`,
+      cancel_url: `${url}/donate`,
     });
     if (session) {
       res.json(session.id);

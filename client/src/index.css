@@ -46,9 +46,6 @@ body {
   }
 }
 
-main {
-  min-height: 83vh;
-}
 
 .donate-container {
   background-image: url('./assets/images/bg-dog-cat.jpg');

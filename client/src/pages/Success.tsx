@@ -1,4 +1,4 @@
-import image from '../assets/images/blue-bg-group.jpg'
+
 
 const Success = () => {
   return (

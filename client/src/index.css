@@ -6,6 +6,7 @@
   font-family: 'CuteCat';
   src: url('./assets/fonts/cute_cat/CuteCat.otf') format('opentype');
 }
+
 @font-face {
   font-family: 'Poppins';
   src: url('./assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
@@ -19,10 +20,12 @@ body {
 .slide-right {
   transform: translateX(-100%);
 }
+
 .slide-in {
   animation: slide-in 0.5s forwards;
   -webkit-animation: slide-in 0.5s forwards;
 }
+
 @keyframes slide-in {
   100% {
     transform: translateX(0%);
@@ -32,11 +35,23 @@ body {
 .slide-left {
   transform: translateX(100%);
 }
+
 .slide {
   animation: slide 0.5s forwards;
 }
+
 @keyframes slide {
   100% {
     transform: translateX(0%);
   }
+}
+
+.donate-container {
+  background-image: url('./assets/images/bg-dog-cat.jpg');
+  min-height: 83vh;
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
 }

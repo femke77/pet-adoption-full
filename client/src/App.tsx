@@ -42,7 +42,7 @@ const App = () => {
       />
       <ReactQueryDevtools />
       <Navigation />
-      <main className='min-h-screen'>
+      <main>
         <Outlet />
       </main>
       <Footer />

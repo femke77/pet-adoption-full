@@ -32,7 +32,8 @@ const InquiryForm = () => {
   } = useForm<FormInput>();
   const [sent, setSent] = useState(false);
 
-  const onSubmit: (data: FormInput) => void = (data: FormInput) => {
+  const onSubmit = (data: FormInput) => {
+    // not really sending this anywhere yet. probably set up emailjs
     console.log('onSubmit', data);
     setSent(true);
     setTimeout(() => {

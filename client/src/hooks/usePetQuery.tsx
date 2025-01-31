@@ -14,8 +14,6 @@ export const usePetQuery = (type = '') => {
   return useQuery({
     queryKey: ['pets', type],
     queryFn: () => fetchPets(type),
-    staleTime: 1000 * 60 * 10,
-    gcTime: 1000 * 60 * 10,
-    placeholderData: (previousData) => previousData ?? [],
+
   });
 };

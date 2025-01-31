@@ -23,7 +23,7 @@
 
   Sequelize is the ORM for a PostgreSQL database. Express is the server. Express Router for routing.
 
-  This application uses session authentication with an axios response interceptor to redirect the user to login if session expires, but rolling is set to true with express-sessions so user should stay logged in until 5 min of inactivity.
+  This application uses session authentication with an axios response interceptor to redirect the user to login if session expires, but rolling is set to true with express-sessions so user should stay logged in while active, but also for x amount of time after inactivity. 
 
   This app was originally designed with headless architecture, but Safari third party cookie rules made this too difficult for this project without the introduction of sub-domains, which I wasn't interested in doing at this time, but will revisit later. 
   

@@ -28,7 +28,7 @@ const PetSelection = () => {
             `px-4 py-2 rounded outline transition-colors duration-200 ${
               selected === 'Dog'
                 ? 'bg-indigo-600 text-white'
-                : 'bg-white text-black'
+                : 'bg-white text-black hover:text-indigo-800'
             }`,
           )}
         >
@@ -40,7 +40,7 @@ const PetSelection = () => {
             `px-4 py-2 rounded outline transition-colors duration-200 ${
               selected === 'Cat'
                 ? 'bg-indigo-600 text-white'
-                : 'bg-white text-black'
+                : 'bg-white text-black hover:text-indigo-800'
             }`,
           )}
         >

@@ -80,7 +80,9 @@ const PetCard = ({ pet }: { pet: Pet }) => {
               )}
             </div>
           ) : (
-            <Link to='/login' className='hover:text-indigo-800 hover:font-bold'>Login to favorite.</Link>
+            <Link to='/login' className='hover:text-indigo-800 hover:font-bold'>
+              Login to favorite.
+            </Link>
           )}
           {error &&
             loggedIn &&

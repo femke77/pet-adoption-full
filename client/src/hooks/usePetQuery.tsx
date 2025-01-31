@@ -14,6 +14,5 @@ export const usePetQuery = (type = '') => {
   return useQuery({
     queryKey: ['pets', type],
     queryFn: () => fetchPets(type),
-
   });
 };

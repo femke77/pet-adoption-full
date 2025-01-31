@@ -1,12 +1,14 @@
-
-
 export default function Main() {
   return (
     <div className=''>
       <h1 className='font-cuteCat text-6xl md:text-7xl lg:text-8xl text-center font-bold mt-3 pt-2 mb-2'>
         Pawsome Pets Adoption
       </h1>
-      <img loading='lazy' src='/images/sunshine-pets.webp' alt='Sunshine Pets' />
+      <img
+        loading='lazy'
+        src='/images/sunshine-pets.webp'
+        alt='Sunshine Pets'
+      />
       <p className='font-cuteCat text-center text-3xl md:text-5xl  my-5 font-bold'>
         Find your new best friend today!
       </p>

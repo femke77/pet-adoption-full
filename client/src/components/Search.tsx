@@ -21,18 +21,18 @@ const PetSelection = () => {
 
   return (
     <div>
-      <div className='flex justify-center space-x-4'>
+      <div className='flex justify-center space-x-4 mb-8'>
         <button
           onClick={() => handleDogOrCat('Dog')}
           className={classNames(
             `px-4 py-2 rounded outline transition-colors duration-200 ${
               selected === 'Dog'
                 ? 'bg-indigo-600 text-white'
-                : 'bg-white text-black hover:text-indigo-800'
+                : 'bg-white text-black hover:bg-indigo-400 hover:text-white'
             }`,
           )}
         >
-          Dog
+          Dogs
         </button>
         <button
           onClick={() => handleDogOrCat('Cat')}
@@ -40,11 +40,11 @@ const PetSelection = () => {
             `px-4 py-2 rounded outline transition-colors duration-200 ${
               selected === 'Cat'
                 ? 'bg-indigo-600 text-white'
-                : 'bg-white text-black hover:text-indigo-800'
+                : 'bg-white text-black hover:bg-indigo-400 hover:text-white'
             }`,
           )}
         >
-          Cat
+          Cats
         </button>
       </div>
       <PetList pets={pets} />

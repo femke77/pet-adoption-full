@@ -45,6 +45,7 @@ export default function Navigation() {
               </div>
               <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
                 <NavLink to='/' className='flex flex-shrink-0 items-center'>
+                {open ? (
                   <DisclosureButton>
                     <img
                       className='h-16 w-16'
@@ -52,6 +53,14 @@ export default function Navigation() {
                       alt='Pawsome Pets Logo - A heart with paw prints inside'
                     />
                   </DisclosureButton>
+                ) : (
+                  <img
+                  className='h-16 w-16'
+                  src={HeartPaw}
+                  alt='Pawsome Pets Logo - A heart with paw prints inside'
+                />
+                )}
+
                 </NavLink>
                 <div className='hidden sm:flex flex-1 items-center py-6'>
                   <div className='flex space-x-4 items-center'>

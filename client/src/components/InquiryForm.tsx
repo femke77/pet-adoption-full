@@ -8,8 +8,6 @@ import {
   Textarea,
 } from '@headlessui/react';
 import { classNames } from '../utils/helpers';
-import DogEyes from '../assets/images/dog-eyes-sml.jpg';
-import DogCat from '../assets/images/cat-on-dog.jpg';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { useState } from 'react';
 
@@ -49,14 +47,14 @@ const InquiryForm = () => {
       <div className='basis-full md:basis-1/3 '>
         {width >= 768 ? (
           <img
-            src={DogCat}
-            alt='Dog and Cat'
+            src='/images/cat-on-dog.jpg'
+            alt='Dog looking at camera with cat on its back'
             className='w-full h-auto p-6 object-cover mt-12  '
           />
         ) : (
           <img
-            src={DogEyes}
-            alt='Dog and Cat'
+            src='/images/dog-eyes-sml.jpg'
+            alt='Eyes of a dog looking at camera'
             loading='lazy'
             className='w-full h-auto p-6 object-cover  '
           />

@@ -51,7 +51,7 @@ main {
 }
 
 .donate-container {
-  background-image: url('./assets/images/bg-dog-cat.jpg');
+  background-image: url('/images/bg-dog-cat.jpg');
   min-height: 100vh;
   background-size: 100%;
   width: 100vw;
@@ -62,7 +62,7 @@ main {
 
 .success {
   min-height: 100vh;
-  background-image: url('./assets/images/blue-bg-group.jpg');
+  background-image: url('/images/blue-bg-group.jpg');
   padding-top: 20px;
   background-size: cover;
   background-position: center;

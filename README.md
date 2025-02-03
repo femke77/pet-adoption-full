@@ -82,6 +82,8 @@
 
 ![ss5](./client/src/assets/images/inquire.png)
 
+![ss5](./client/src/assets/images/performance.png)
+
 ______________________________________________________________________________________
 
 

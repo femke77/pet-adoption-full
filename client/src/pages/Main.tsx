@@ -6,8 +6,9 @@ export default function Main() {
       </h1>
       <img
         loading='eager'
-        src='/images/sunshine-pets.webp'
+        src='/images/sunshine-pets-smlr.webp'
         alt='Sunshine Pets'
+        className='w-full h-auto'
       />
       <p className='font-cuteCat text-center text-3xl md:text-5xl  my-5 font-bold'>
         Find your new best friend today!

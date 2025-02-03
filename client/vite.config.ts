@@ -1,8 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-
+import analyze from 'rollup-plugin-analyzer';
 // https://vite.dev/config/
 export default defineConfig({
+  build :{
+    minify: "terser",
+    rollupOptions: {
+      plugins: [analyze()]
+    },
+  },
   plugins: [react()],
 
   server: {

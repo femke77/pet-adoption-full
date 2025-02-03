@@ -54,7 +54,7 @@ const LoginForm: React.FC = () => {
 
   useEffect(() => {
     if (loggedIn) {
-      navigate('/');
+      navigate('/favorites');
     }
   }, [loggedIn]);
 

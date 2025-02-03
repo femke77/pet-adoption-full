@@ -16,8 +16,8 @@ const PetSelection = () => {
     }
   };
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error fetching pets.</div>;
+  if (isLoading) return <div className='text-center text-lg text-indigo-800'>Loading...</div>;
+  if (error) return <div className='text-red ml-12'>An error has occurred. Try again later.</div>;
 
   return (
     <div>

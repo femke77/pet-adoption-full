@@ -5,7 +5,7 @@ export default function Main() {
         Pawsome Pets Adoption
       </h1>
       <img
-        loading='lazy'
+        loading='eager'
         src='/images/sunshine-pets.webp'
         alt='Sunshine Pets'
       />

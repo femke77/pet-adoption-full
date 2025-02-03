@@ -3,7 +3,6 @@ import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { loadStripe } from '@stripe/stripe-js';
 
 const key = import.meta.env.VITE_STRIPE_PUBLIC_KEY!;
-console.log(key);
 
 const stripePromise = loadStripe(key);
 

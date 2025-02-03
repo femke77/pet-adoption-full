@@ -60,7 +60,7 @@ const Register: React.FC = () => {
 
   useEffect(() => {
     if (loggedIn) {
-      navigate('/');
+      navigate('/meet');
     }
   }, [loggedIn]);
 

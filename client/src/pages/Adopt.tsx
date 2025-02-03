@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import adopt from '../assets/images/adopt.png';
 import counsel from '../assets/images/counsel.png';
 import checks from '../assets/images/checks.png';
@@ -8,49 +8,33 @@ import { Link } from 'react-router-dom';
 
 const Adopt = () => {
   const sectionsRef = useRef<HTMLElement[]>([]);
-  // Set of sections that have been animated for animation on scroll up as well as scroll down
-  const [animatedSections, setAnimatedSections] = useState<Set<number>>(
-    new Set(),
-  );
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+    }
+
+    observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const section = entry.target as HTMLElement;
-          const sectionIndex = sectionsRef.current.indexOf(section);
+          const slideInElement = section.querySelector('.slide-right');
+          const slideElement = section.querySelector('.slide-left');
 
           if (entry.isIntersecting) {
-            const slideInElement = section.querySelector('.slide-right');
-            const slideElement = section.querySelector('.slide-left');
-
             if (slideInElement) {
               slideInElement.classList.add('slide-in');
             }
             if (slideElement) {
               slideElement.classList.add('slide');
             }
-
-            setAnimatedSections((prev) => new Set(prev).add(sectionIndex));
           } else {
-            // Section is leaving view
-            // Only remove classes if the section was previously animated
-            if (animatedSections.has(sectionIndex)) {
-              const slideInElement = section.querySelector('.slide-right');
-              const slideElement = section.querySelector('.slide-left');
-
-              if (slideInElement) {
-                slideInElement.classList.remove('slide-in');
-              }
-              if (slideElement) {
-                slideElement.classList.remove('slide');
-              }
-
-              setAnimatedSections((prev) => {
-                const next = new Set(prev);
-                next.delete(sectionIndex);
-                return next;
-              });
+            if (slideInElement) {
+              slideInElement.classList.remove('slide-in');
+            }
+            if (slideElement) {
+              slideElement.classList.remove('slide');
             }
           }
         });
@@ -58,17 +42,21 @@ const Adopt = () => {
       {
         threshold: 0.2,
         rootMargin: '0px 0px',
-      },
+      }
     );
 
     sectionsRef.current.forEach((section) => {
       if (section) {
-        observer.observe(section);
+        observerRef.current?.observe(section);
       }
     });
 
-    return () => observer.disconnect();
-  }, [animatedSections]);
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
 
   return (
     <div className='mx-auto overflow-hidden px-4 sm:px-10 lg:px-12'>

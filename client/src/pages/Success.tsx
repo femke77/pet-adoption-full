@@ -28,7 +28,7 @@ const Success = () => {
           </h2>
         </div>
       ) : (
-        <p className='text-red-700'>Something went wrong with your payment.</p>
+        <p className='text-red-700'>Oh, no. Something went wrong with your payment.</p>
       )}
     </>
   );

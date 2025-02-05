@@ -6,8 +6,9 @@ import {
   deletePet,
   createPet,
   donate,
+  donationStatusCheck,
 } from '../../controllers/pet-controller.js';
-// import { apiGuard } from '../../middleware/authGuard.js';
+
 const router = express.Router();
 
 // GET /pets - Get all pets
@@ -25,6 +26,10 @@ router.post('/', createPet);
 // DELETE /pets/:id - Delete a pet by id
 router.delete('/:id', deletePet);
 
+// POST /pets/donate - Donate to the company
 router.post('/donate', donate);
+
+// GET /pets/donate/status-check/session_id - Check the status of the donation using stripe session id
+router.get('/donate/status-check/:session_id', donationStatusCheck);
 
 export { router as petRouter };

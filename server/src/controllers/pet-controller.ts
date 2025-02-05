@@ -8,6 +8,23 @@ if (!key) {
 }
 const stripeInstance = new Stripe(key);
 
+// GET /donate/status-check - Check the status of the donation
+
+export const donationStatusCheck = async (req: Request, res: Response) => {
+  const { session_id } = req.params;
+  try {
+    const session = await stripeInstance.checkout.sessions.retrieve(session_id);
+    if (session) {
+      console.log(session);
+      return res.status(200).json(session);
+    } else {
+      return res.status(404).json({ message: 'Session not found' });
+    }
+  } catch (error: any) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
 // POST /donate - Create a donation session
 export const donate = async (req: Request, res: Response) => {
   const { amount } = req.body;

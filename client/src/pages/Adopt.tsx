@@ -42,7 +42,7 @@ const Adopt = () => {
       {
         threshold: 0.2,
         rootMargin: '0px 0px',
-      }
+      },
     );
 
     sectionsRef.current.forEach((section) => {

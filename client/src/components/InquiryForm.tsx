@@ -101,6 +101,7 @@ const InquiryForm = () => {
             <Input
               {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
               onClick={() => clearErrors('email')}
+              autoComplete='email'
               className={classNames(
                 'outline outline-gray-400 mt-3 block w-full rounded-lg border-none bg-gray-200 py-1.5 px-3 text-sm/6 text-black',
                 'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-black/25',

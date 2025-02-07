@@ -38,7 +38,7 @@ const sess = {
     //     : 'localhost',
     // path: '/',
     // proxy: process.env.NODE_ENV === 'production' ? true : false,
-    // partitioned: true, // Support for Chrome's CHIPS and Safari's partitioned cookies
+    partitioned: true, // Support for Chrome's CHIPS and Safari's partitioned cookies
   },
   resave: false,
   saveUninitialized: true,

@@ -83,7 +83,8 @@ const LoginForm: React.FC = () => {
               <div className='mt-2'>
                 <input
                   className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'
-                  type='text'
+                  type='email'
+                  autoComplete='email'
                   placeholder='john_doe@gmail.com'
                   onChange={(e) => {
                     setFormState({ ...formState, email: e.target.value });
@@ -115,6 +116,7 @@ const LoginForm: React.FC = () => {
                   id='password'
                   name='password'
                   type='password'
+             
                   required
                   placeholder='password'
                   onChange={(e) => {

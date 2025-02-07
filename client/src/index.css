@@ -38,6 +38,7 @@ body {
 
 .slide {
   animation: slide 0.5s forwards;
+  -webkit-animation: slide 0.5s forwards;
 }
 
 @keyframes slide {

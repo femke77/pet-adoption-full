@@ -89,8 +89,9 @@ const Register: React.FC = () => {
               <div className='mt-2'>
                 <input
                   className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'
-                  type='text'
+                  type='email'
                   name='email'
+                  autoComplete='email'
                   required
                   placeholder='john_doe@gmail.com'
                   onChange={(e) => {
@@ -112,8 +113,10 @@ const Register: React.FC = () => {
                 <input
                   className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'
                   type='text'
+                  id="username"
                   placeholder='luckydog123'
                   name='username'
+                  autoComplete='username'
                   required
                   onChange={(e) => {
                     setFormState({ ...formState, username: e.target.value });
@@ -136,6 +139,7 @@ const Register: React.FC = () => {
                   type='text'
                   placeholder='Mary'
                   name='first_name'
+                  autoComplete='given-name'
                   required
                   onChange={(e) => {
                     setFormState({ ...formState, first_name: e.target.value });
@@ -159,6 +163,7 @@ const Register: React.FC = () => {
                   placeholder='Jones'
                   name='last_name'
                   required
+                  autoComplete='family-name'
                   onChange={(e) => {
                     setFormState({ ...formState, last_name: e.target.value });
                     setErrors({ ...errors, last_name: undefined });
@@ -195,7 +200,7 @@ const Register: React.FC = () => {
                     setFormState({ ...formState, password: e.target.value });
                     setErrors({ ...errors, password: undefined });
                   }}
-                  autoComplete='current-password'
+                  autoComplete='off'
                   className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'
                 />
               </div>

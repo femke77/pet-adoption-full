@@ -64,6 +64,7 @@ const Register: React.FC = () => {
     }
   }, [loggedIn]);
 
+
   return (
     <div>
       <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8'>
@@ -196,8 +197,11 @@ const Register: React.FC = () => {
                   id='password'
                   type='password'
                   name='password'
+                  inputMode="none"
                   required
                   placeholder='password'
+                  readOnly
+                  onFocus={(e) => e.target.removeAttribute("readOnly")}
                   onChange={(e) => {
                     setFormState({ ...formState, password: e.target.value });
                     setErrors({ ...errors, password: undefined });

@@ -94,6 +94,8 @@ export const getAllPets = async (req: Request, res: Response) => {
         num_users: pet.favoritedBy?.length || 0,
       };
     });
+  console.log(updatedPets);
+  
     res.json(updatedPets);
   } catch (error: any) {
     console.log(error.message);

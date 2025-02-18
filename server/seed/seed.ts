@@ -13,14 +13,13 @@ const seedDatabase = async () => {
 
   const pets = await Pet.bulkCreate(petData);
 
-  users.forEach((user) => {
-    const randomPets = pets.sort(() => Math.random() - 0.5).slice(0, 8);
-    randomPets.forEach(async (pet, index) => {
-      console.log(`Adding pet ${index} to user favorites`);
-      
-      await user.addFavoritePet(pet);
-    });
-  })
+  await Promise.all(users.map(async (user) => {
+    const randomPets = pets.sort(() => Math.random() - 0.5).slice(0, 15);
+    await Promise.all(randomPets.map(async (pet) => {
+      console.log(`Adding pet ${pet.id} to user ${user.id} favorites`);
+      return user.addFavoritePet(pet);
+    }));
+  }));
 
 
   console.log(' 🌱🌱🌱🌱🌱🌱🌱🌱 SEEDING DONE! 🌱🌱🌱🌱🌱🌱🌱🌱🌱');

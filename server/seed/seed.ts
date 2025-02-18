@@ -15,7 +15,9 @@ const seedDatabase = async () => {
 
   users.forEach((user) => {
     const randomPets = pets.sort(() => Math.random() - 0.5).slice(0, 8);
-    randomPets.forEach(async (pet) => {
+    randomPets.forEach(async (pet, index) => {
+      console.log(`Adding pet ${index} to user favorites`);
+      
       await user.addFavoritePet(pet);
     });
   })

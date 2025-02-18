@@ -6,12 +6,20 @@ import petData from './pet_data.json';
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
+  const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  await Pet.bulkCreate(petData);
+  const pets = await Pet.bulkCreate(petData);
+
+  users.forEach((user) => {
+    const randomPets = pets.sort(() => Math.random() - 0.5).slice(0, 8);
+    randomPets.forEach(async (pet) => {
+      await user.addFavoritePet(pet);
+    });
+  })
+
 
   console.log(' 🌱🌱🌱🌱🌱🌱🌱🌱 SEEDING DONE! 🌱🌱🌱🌱🌱🌱🌱🌱🌱');
 
